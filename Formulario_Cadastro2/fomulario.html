@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Formulário de Cadastro</title>
+        <style>
+            body {
+                font-family: Arial, Helvetica, sans-serif;
+            }
+
+            form {
+                width: 400px;
+                border: 1px solid;
+                border-radius: 6px;
+            }
+
+            form div {
+                margin: 12px;
+            }
+
+            form label {
+                width: 100px;
+                text-align: right;
+                margin-right: 10px;
+            }
+
+            #divbotao {
+                text-align: right; 
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Formulário de "Cadastro" em PHP</h1>
+        <form action="cadastrar.php">
+            <div>
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome"/>
+            </div>
+            <div>
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email"/>
+            </div>
+            <div>
+                <label for="cidade">Cidade:</l  abel>
+                <input type="text" id="cidade" name="cidade"/>
+            </div>
+            <div>
+                <button>Cadastrar</button>
+            </div>
+        </form>
+    </body>
+</html>
