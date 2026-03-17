@@ -1,15 +1,15 @@
 <?php
     // recebemos e tratamos os dados do formulário antes de usá-los com o htmlspecialchars
 
-    $nome = strtoupper(htmlspecialchars($_GET["nome"]));
-    $email = htmlspecialchars($_GET["email"]);
-    $cidade = strtolower(htmlspecialchars($_GET["cidade"]));
-    $estado = htmlspecialchars($_GET["estado"]);
-    $data = htmlspecialchars($_GET["nascimento"]);
+    $nome = strtoupper(htmlspecialchars($_POST["nome"]));
+    $email = htmlspecialchars($_POST["email"]);
+    $cidade = strtolower(htmlspecialchars($_POST["cidade"]));
+    $estado = htmlspecialchars($_POST["estado"]);
+    $data = htmlspecialchars($_POST["nascimento"]);
     // tratamos a data para que ela fique no formato dia/mes/ano
     $dataFormatada = date("d/m/y", strtotime($data));
     // tratamos a senha fazendo uma "criptografia" com o hash md5
-    $senha = md5(htmlspecialchars($_GET["senha"]));
+    $senha = md5(htmlspecialchars($_POST["senha"]));
 ?>
 
 <!DOCTYPE html>
