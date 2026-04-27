@@ -1,7 +1,13 @@
 <?php
     session_start();
-    session_destroy(); 
+    session_destroy();
+    
+    header("Location: com_sessao1.php"); /*Redireciona o usuário para o arquivo indicado após o Location:
+    
+    IMPORTANTE: Este comando só funciona se estiver logo no início de um arquivo .php,
+    Não funciona se for colocado depois de qualquer conteudo HTML ou impressão no navegador (echo)
 
+    /*
     /*
     Se quisermos eliminar uma informação especifica dentro da sessão, basta remover do array $_SESSION o dado
     armazenado em uma chave especifica usando a função unset().
