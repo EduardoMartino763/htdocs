@@ -33,5 +33,8 @@ array_push($_SESSION["Carrinho"], );
             <button>Comprar</button>
         </form>
     </div>
+    <div>
+        <h2>Seu carrinho possui <?= sizeof($_SESSION["Carrinho"]) ?> </h2>
+    </div>
 </body>
 </html>
