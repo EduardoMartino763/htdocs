@@ -15,4 +15,11 @@ require("conexao.php");
     $comando->bindParam(":preco", $preco); 
     $comando->bindParam(":promocao", $promocao);
     $comando->bindParam(":lanc", $lancamento);
+
+    $sucesso = $comando->execute();
+    if ($sucesso) {
+        header("Location: listar_produtos.php");
+    }
 ?>
+
+<h1 style="color: red">FALHA NA INCLUSÃO</h1>
