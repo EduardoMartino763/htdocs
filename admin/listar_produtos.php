@@ -20,6 +20,7 @@
     <h2>listagem de Produtos Cadastrados</h2>
     <table border="1">
         <tr>
+            <th>AÇÕES</th>
             <th>ID</th>
             <th>Nome</th>
             <th>Descrição</th>
@@ -29,10 +30,15 @@
         </tr>
         <?php foreach($resultado as $produto) {?>
         <tr>
+            <td>
+                <a href="excluir_produto.php?id=<?= $produto["id"]; ?>">EXCLUIR</a>
+                |
+                <a href="form_alterar_produto.php?id=<?= $produto["id"]; ?>">Alterar</a>
+            </td>
             <td><?= $produto["id"]; ?></td>
             <td><?= $produto["nome"]; ?></td>
             <td><?= $produto["descricao"]; ?></td>
-            <td><?= $produto["preco"]; ?></td>
+            <td>R$ <?= number_format($produto["preco"], 2, ",", ".") ?></td>
             <td><?= $produto["em_promocao"] ?></td>
             <td><?= $produto["lancamento"] ?></td>
         </tr>
