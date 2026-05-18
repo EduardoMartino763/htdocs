@@ -23,10 +23,12 @@
 <body>
     <h1>Fatec Shop - Área administrativa</h1>
     <h2>Incluir Produto</h2>
-    <form action="incluir_produto.php">
+    <form action="alterar_produto.php">
         <div>
             <label for="nome">Nome do produto</label>
             <input type="text" id="nome" value="<?= $produto["nome"] ?>" name="nome" size="50" maxlength="50">
+            |
+            <input type="hidden" name="id" value="<?= $id ?>">
         </div>
         <div>
             <label for="descricao">Descrição</label>
@@ -39,15 +41,15 @@
         <div>
             <label for="promocao">Em promoção</label>
             <select name="promocao" id="promocao" required>
-                <option value="0">Não</option>
-                <option value="1">Sim</option>
+                <option value="0" <?= $produto["promocao"] ? "selected" : ""?>>Não</option>
+                <option value="1" <?= $produto["promocao"] ? "selected" : ""?>>Sim</option>
             </select>
         </div>
         <div>
             <label for="lancamento ">É lançamento?</label>
             <select name="lancamento " id="lancamento" required>
-                <option value="0" selected>Não</option>
-                <option value="1">Sim</option>
+                <option value="0" <?= $produto["lancamento"] ? "selected" : ""?>>Não</option>
+                <option value="1" <?= $produto["lancamento"] ? "selected" : ""?>>Sim</option>
             </select>
         </div>
         <div>
